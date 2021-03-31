@@ -76,7 +76,7 @@ function SignOut() {
 	);
 }
 
-function ChatRoom() {
+function ChattingPage() {
 	const dummy = useRef();
 	const messagesRef = firestore.collection("messages");
 	const query = messagesRef.orderBy("createdAt");
@@ -164,82 +164,6 @@ const Message = (props) => {
 };
 
 function App() {
-	/*
-	let variable = 0;
-	const [input, setinput] = useState("");
-	const [messages, setmessages] = useState([]);
-	const [username, setusername] = useState("");
-	console.log(messages);
-	const sendMessage = (e) => {
-		variable++;
-		console.log(variable);
-		e.preventDefault();
-		db.collection("messages").add({
-			username,
-			message: input,
-			timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-		});
-		setinput("");
-	};
-
-	useEffect(() => {
-		console.log(db.collection("messages").orderBy("createdAt", "asc"));
-
-		//console.log(items);
-
-		db.collection("messages").onSnapshot((snapshot) => {
-			setmessages(
-				snapshot.docs.map((doc) => ({ id: doc.id, message: doc.data() }))
-			);
-		});
-		return () => {
-			//
-		};
-	}, []);
-	useEffect(() => {
-		setusername(prompt("enter your name"));
-		return () => {
-			//;
-		};
-	}, []);
-	return (
-		<div className="App">
-			<img
-				src="https://www.shareicon.net/data/2015/08/10/83196_chat_1024x1024.png?w=100&h=100"
-				alt=""
-			/>
-			<h1>Aman's messenger</h1>
-			<h2>Welcome {username}</h2>
-
-			<FlipMove>
-				{messages.map(({ id, message }) => (
-					<Message key={id} username={username} message={message}></Message>
-				))}
-			</FlipMove>
-
-			<form className="app_form">
-				<div className="typing_field">
-					<TextField
-						className="textfield"
-						placeholder="enter your message"
-						value={input}
-						onChange={(e) => setinput(e.target.value)}
-						width="80%"
-					/>
-					<IconButton
-						className="button"
-						disabled={input === ""}
-						variant="contained"
-						color="primary"
-						onClick={(e) => sendMessage(e)}
-					>
-						<i class="fa fa-paper-plane" aria-hidden="true"></i>
-					</IconButton>
-				</div>
-			</form>
-		</div>
-	);
-	 */
 	const [user] = useAuthState(auth);
 
 	return (
@@ -254,7 +178,7 @@ function App() {
 				<SignOut />
 			</header>
 
-			<section>{user ? <ChatRoom /> : <SignIn />}</section>
+			<section>{user ? <ChattingPage /> : <SignIn />}</section>
 		</div>
 	);
 }
