@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+**Screen Shots**
+![authenticationpage](https://user-images.githubusercontent.com/53750987/113092548-d160a700-920b-11eb-817b-658adc178f01.png)
+![chattingpage](https://user-images.githubusercontent.com/53750987/113092554-d4f42e00-920b-11eb-91a6-3db653d50f1d.png)
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +75,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
