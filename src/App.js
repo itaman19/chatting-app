@@ -19,19 +19,11 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-
+import firebaseApp from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
-firebase.initializeApp({
-	apiKey: "AIzaSyB0Qv6tC_JL-xqTqMyTiBUGXRUCiJ_SPFc",
-	authDomain: "amans-messenger-a4e8d.firebaseapp.com",
-	projectId: "amans-messenger-a4e8d",
-	storageBucket: "amans-messenger-a4e8d.appspot.com",
-	messagingSenderId: "175522257603",
-	appId: "1:175522257603:web:116baf81bb4c8a561a6076",
-	measurementId: "G-TRDV3C2Z9Q",
-});
+firebase.initializeApp(firebaseApp);
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 //const analytics = firebase.analytics();
